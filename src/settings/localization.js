@@ -17,6 +17,7 @@ export default new LocalizedStrings({
     reactNative:"React Native Developer",
     vueJs:"VueJs Developer",
     javascript:"Javascript Developer",
+    worksTitle:"Some of my works"
   },
   ES: {
     works:"Trabajos",

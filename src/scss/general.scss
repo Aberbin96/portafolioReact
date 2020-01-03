@@ -2,10 +2,16 @@
 body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     // font-family: 'Martel', serif;
 }
 html{
     scroll-behavior: smooth;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .white{
 }

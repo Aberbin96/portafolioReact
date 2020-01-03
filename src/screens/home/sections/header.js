@@ -4,11 +4,27 @@ import ReactAnime from 'react-animejs'
 const {Anime, stagger} = ReactAnime
 
 function Header(props) {
+  const text = (str) => {
+    let array = [
+      props.localization.backend,
+      props.localization.frontend,
+      props.localization.mobile,
+      props.localization.reactJs,
+      props.localization.php,
+      props.localization.laravel,
+      props.localization.wordpress,
+      props.localization.reactNative,
+      props.localization.vueJs,
+      props.localization.javascript,
+    ]
+    let rValue = parseInt(Math.random() * (array.length - 0) + 0);
+    return str.replace("%i", array[rValue])
+  }
   return (
-    <div className='header'>
+    <div className='header section'>
         { props.children }
         <h1 className="header__title">
-            {props.localization.headerTitle}
+            {text(props.localization.headerTitle)}
         </h1>
         <Anime initial={[{targets: "#ca", translateY: -20, easing: "spring", direction: "alternate", loop: true, duration: 1000 }]} >
           <div id="ca" className="header__ca">
