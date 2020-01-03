@@ -1,0 +1,53 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px 20px;
+    transition: color 0.5s linear;
+    &__logo{
+        width: 80px;
+        margin: auto 20px;
+        font-size: 50px;
+    }
+    &__menu{
+        display: flex;
+        &__item{
+            margin: 0 15px;
+            cursor: pointer;
+            &__languages{
+                margin-left: 5px;
+            }
+        }
+    }
+}
+.white{
+    .nav{
+        &__logo{
+            color: black;
+        }
+        &__menu{
+            &__item{
+                color: black;
+                &__languages{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+.black{
+    .nav{
+        &__logo{
+            color: white;
+        }
+        &__menu{
+            &__item{
+                color: white;
+                &__languages{
+                    color: white;
+                }
+            }
+        }
+    }
+}
