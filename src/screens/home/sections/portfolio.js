@@ -10,12 +10,15 @@ function Portfolio(props) {
                 <hr />
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/atancha.png" />
                 <span>Atancha</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/inti.png" />
                 <span>Agroinfo</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/inti.png" />
                 <span>Inti API</span>
             </div>
         </div>
@@ -25,6 +28,7 @@ function Portfolio(props) {
                 <span>2017</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/default.png" />
                 <span>Kromium</span>
             </div>
         </div>
@@ -34,15 +38,19 @@ function Portfolio(props) {
                 <hr />
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/salvador.png" />
                 <span>Xsalvador</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/panaPanadero.png" />
                 <span>PanaPanadero</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/ilargento.png" />
                 <span>Ilargento</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/default.png" />
                 <span>Mi Portafolio en Vue</span>
             </div>
         </div>
@@ -52,15 +60,19 @@ function Portfolio(props) {
                 <span>2019</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/tuOfertazo.png" />
                 <span>TuOfertazo</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/aldi.png" />
                 <span>Aldi</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/activeCity.png" />
                 <span>Active City</span>
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/default.png" />
                 <span>Dragoy</span>
             </div>
         </div>
@@ -70,6 +82,7 @@ function Portfolio(props) {
                 <hr />
             </div>
             <div className='portfolio__timeline__item'>
+                <img src="/images/default.png" />
                 <span>Tu proyecto</span>
             </div>
         </div>
