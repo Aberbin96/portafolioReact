@@ -21,6 +21,7 @@ html{
       justify-content: space-between;
       grid-template-columns: repeat(2, 1fr);
         &__ca{
+            border: none;
             width: 200px;
             border-radius: 40px;
             font-size: 1.5em;

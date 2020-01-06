@@ -12,7 +12,7 @@ function Contact(props) {
   return (
     <footer className='footer'>
       <section id="contact" className='contact'>
-        <a className='contact__ca' >{props.localization.contactMe}</a>
+        <button className='contact__ca' >{props.localization.contactMe}</button>
         <div className='contact__social'>
           <span className='contact__social__title'>{props.localization.socialNetwork}</span>
             <a href="https://www.linkedin.com/in/alejandro-berbin/" className='contact__social__item linkedin' >

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactAnime from 'react-animejs'
-const {Anime, stagger} = ReactAnime
+const {Anime} = ReactAnime
 
 function Header(props) {
   const text = (str) => {

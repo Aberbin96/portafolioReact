@@ -21,7 +21,9 @@ export default new LocalizedStrings({
     worksDescription: "There are from web projects, like mobile and jobs like CM.",
     socialNetwork: "My social networks:",
     copyright: "The last update was %d days ago",
-    contactMe: "Contact me"
+    contactMe: "Contact Me",
+    PortfolioVueJS: "Portfolio VueJS",
+    comingSoon: "Coming Soon"
   },
   ES: {
     works:"Trabajos",
