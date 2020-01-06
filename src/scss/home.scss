@@ -1,0 +1,246 @@
+.header{
+    min-height: 100vh;
+    position: relative;
+    transition: background-color 0.8s ease, color 0.5s linear;
+    &__title{
+      z-index: 1;
+      text-align: center;
+      display: block;
+      width: 50%;
+      margin: 20px auto;
+      font-size: $font-size-b;
+    }
+    &__ca{
+      text-decoration: none;
+      z-index: 1;
+      text-align: center;
+      width: 50%;
+      margin: 20px auto;
+      cursor: pointer;
+      &__text{
+        display: block;
+        font-size: $font-size-x;
+      }
+      &__icon{
+        display: block;
+      }
+    }
+    &__circle{
+      position: absolute;
+      border-radius: 50%;
+      box-shadow: 8px 5px 5px rgba(0,0,0,.4);
+      &--1{
+        bottom: 30%;
+        right: 30%;
+        width: 40px;
+        height: 40px;
+        background: $orange;
+        background: -webkit-linear-gradient(to bottom right, $orange, $yellow);
+        background: linear-gradient(to bottom right, $orange, $yellow);
+      }
+      &--2{
+        bottom: 20%;
+        right: 40%;
+        width: 100px;
+        height: 100px;
+        background: $aqua;
+        background: -webkit-linear-gradient(to bottom right, $aqua, $purple);
+        background: linear-gradient(to bottom right, $aqua, $purple);
+      }
+      &--3{
+        bottom: -20px;
+        right: 2%;
+        width: 250px;
+        height: 250px;
+        background: $purple;
+        background: -webkit-linear-gradient(to bottom right, $purple, $pink);
+        background: linear-gradient(to bottom right, $purple, $pink);
+      }
+      &--4{
+        top: 10%;
+        right: 0%;
+        width: 150px;
+        height: 150px;
+        background: $pink;
+        background: -webkit-linear-gradient(to bottom right, $pink, $purple);
+        background: linear-gradient(to bottom right, $pink, $purple);
+      }
+      &--5{
+        top: -50px;
+        left: 30%;
+        width: 170px;
+        height: 170px;
+        background: $yellow;
+        background: -webkit-linear-gradient(to bottom right, $yellow, $orange);
+        background: linear-gradient(to bottom right, $yellow, $orange);
+      }
+      &--6{
+        top: 25%;
+        left: 13%;
+        width: 60px;
+        height: 60px;
+        background: $orange;
+        background: -webkit-linear-gradient(to bottom right, $orange, $pink);
+        background: linear-gradient(to bottom right, $orange, $pink);
+      }
+      &--7{
+        bottom: 12%;
+        left: -5%;
+        width: 200px;
+        height: 200px;
+        background: $purple;
+        background: -webkit-linear-gradient(to bottom right, $purple, $yellow);
+        background: linear-gradient(to bottom right, $purple, $yellow);
+      }
+    }
+}
+.portfolio{
+  padding: 50px 5% 0;
+  &__title{
+    font-family: $second-font-family;
+    font-size: $font-size-m;
+    font-weight: $font-weight-b;
+    text-align: right;
+    margin: 20px 0 20px auto;
+    &--tiny{
+      font-size: $font-size-x;
+      font-weight: $font-weight-n;
+      display: block;
+    }
+  }
+  &__timeline{
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 50px;
+    &__year{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      grid-column: 2 span;
+      padding-bottom: 50px;
+      &--orange{
+        color: $orange;
+      }
+      &--aqua{
+        color: $aqua;
+      }
+      &--purple{
+        color: $purple;
+      }
+      &--pink{
+        color: $pink;
+      }
+      &--yellow{
+        color: $yellow;
+      }
+      span{
+        font-style: italic;
+      }
+      hr{
+        height: 1px;
+        border:none;
+        border-top: 1px dashed gray;
+        margin: 0;
+        width: 95%;
+      }
+    }
+    &__item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      justify-self: center;
+      span{
+        text-align: center;
+      }
+      img{
+        max-width: 200px;
+      }
+      &--two-center{
+        grid-column: 2 span;
+      }
+      &--two-rigth{
+        grid-column: 2 span;
+        margin-left: 230px;
+      }
+      &--two-lefth{
+        grid-column: 2 span;
+        margin-right: 230px;
+      }
+      &--one-up{
+        margin-bottom: 80px;
+      }
+      &--one-down{
+        margin-top: 80px;
+      }
+    }
+  }
+}
+.white{
+  .header{
+    background: $white;
+    background: -webkit-linear-gradient(to bottom, $white, $light);
+    background: linear-gradient(to bottom, $white, $light);
+    &__title{
+      color: black;
+    }
+    &__ca{
+      &__text{
+        color: black;
+      }
+      &__icon{
+        color: black;
+      }
+    }
+  }
+  .portfolio{
+    background: $light;
+    background: -webkit-linear-gradient(to bottom, $light, $white);
+    background: linear-gradient(to bottom, $light, $white);
+    &__title{
+      color: $black;
+    }
+    &__timeline{
+      &__year{
+        // hr{
+        // }
+      }
+      &__item{
+        color: $black;
+      }
+    }
+  }
+}
+.black{
+  .header{
+    background-color: $gray;
+    &__title{
+      color: $white;
+    }
+    &__ca{
+      &__text{
+        color: $white;
+      }
+      &__icon{
+        color: $white;
+      }
+    }
+  }
+  .portfolio{
+    background-color: black;
+    &__title{
+      color: $white;
+    }
+    &__timeline{
+      &__year{
+        // hr{
+        // }
+      }
+      &__item{
+        color: $white;
+      }
+    }
+  }
+}
