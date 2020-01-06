@@ -2,17 +2,16 @@
     min-height: 100vh;
     position: relative;
     transition: background-color 0.8s ease, color 0.5s linear;
-    // overflow: hidden;
-    // box-shadow: 0px 0px 15px 1px black;
     &__title{
       z-index: 1;
       text-align: center;
       display: block;
       width: 50%;
       margin: 20px auto;
-      font-size: 2em;
+      font-size: $font-size-b;
     }
     &__ca{
+      text-decoration: none;
       z-index: 1;
       text-align: center;
       width: 50%;
@@ -20,7 +19,7 @@
       cursor: pointer;
       &__text{
         display: block;
-        font-size: .8em;
+        font-size: $font-size-x;
       }
       &__icon{
         display: block;
@@ -35,81 +34,108 @@
         right: 30%;
         width: 40px;
         height: 40px;
-        background: #DC8665;
-        background: -webkit-linear-gradient(to bottom right, #DC8665, #EEB462);
-        background: linear-gradient(to bottom right, #DC8665, #EEB462);
+        background: $orange;
+        background: -webkit-linear-gradient(to bottom right, $orange, $yellow);
+        background: linear-gradient(to bottom right, $orange, $yellow);
       }
       &--2{
         bottom: 20%;
         right: 40%;
         width: 100px;
         height: 100px;
-        background: #138086;
-        background: -webkit-linear-gradient(to bottom right, #138086, #534666);
-        background: linear-gradient(to bottom right, #138086, #534666);
+        background: $aqua;
+        background: -webkit-linear-gradient(to bottom right, $aqua, $purple);
+        background: linear-gradient(to bottom right, $aqua, $purple);
       }
       &--3{
         bottom: -20px;
         right: 2%;
         width: 250px;
         height: 250px;
-        background: #534666;
-        background: -webkit-linear-gradient(to bottom right, #534666, #CD7672);
-        background: linear-gradient(to bottom right, #534666, #CD7672);
+        background: $purple;
+        background: -webkit-linear-gradient(to bottom right, $purple, $pink);
+        background: linear-gradient(to bottom right, $purple, $pink);
       }
       &--4{
         top: 10%;
         right: 0%;
         width: 150px;
         height: 150px;
-        background: #CD7672;
-        background: -webkit-linear-gradient(to bottom right, #CD7672, #534666);
-        background: linear-gradient(to bottom right, #CD7672, #534666);
+        background: $pink;
+        background: -webkit-linear-gradient(to bottom right, $pink, $purple);
+        background: linear-gradient(to bottom right, $pink, $purple);
       }
       &--5{
         top: -50px;
         left: 30%;
         width: 170px;
         height: 170px;
-        background: #EEB462;
-        background: -webkit-linear-gradient(to bottom right, #EEB462, #DC8665);
-        background: linear-gradient(to bottom right, #EEB462, #DC8665);
+        background: $yellow;
+        background: -webkit-linear-gradient(to bottom right, $yellow, $orange);
+        background: linear-gradient(to bottom right, $yellow, $orange);
       }
       &--6{
         top: 25%;
         left: 13%;
         width: 60px;
         height: 60px;
-        background: #DC8665;
-        background: -webkit-linear-gradient(to bottom right, #DC8665, #CD7672);
-        background: linear-gradient(to bottom right, #DC8665, #CD7672);
+        background: $orange;
+        background: -webkit-linear-gradient(to bottom right, $orange, $pink);
+        background: linear-gradient(to bottom right, $orange, $pink);
       }
       &--7{
         bottom: 12%;
         left: -5%;
         width: 200px;
         height: 200px;
-        background: #534666;
-        background: -webkit-linear-gradient(to bottom right, #534666, #EEB462);
-        background: linear-gradient(to bottom right, #534666, #EEB462);
+        background: $purple;
+        background: -webkit-linear-gradient(to bottom right, $purple, $yellow);
+        background: linear-gradient(to bottom right, $purple, $yellow);
       }
     }
 }
 .portfolio{
-  padding: 50px 5%;
+  padding: 50px 5% 0;
   &__title{
-    font-size: 1.5em;
+    font-family: $second-font-family;
+    font-size: $font-size-m;
+    font-weight: $font-weight-b;
     text-align: right;
-    width: 50%;
     margin: 20px 0 20px auto;
+    &--tiny{
+      font-size: $font-size-x;
+      font-weight: $font-weight-n;
+      display: block;
+    }
   }
   &__timeline{
     min-height: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 50px;
     &__year{
       display: flex;
       justify-content: space-between;
       align-items: center;
+      grid-column: 2 span;
+      padding-bottom: 50px;
+      &--orange{
+        color: $orange;
+      }
+      &--aqua{
+        color: $aqua;
+      }
+      &--purple{
+        color: $purple;
+      }
+      &--pink{
+        color: $pink;
+      }
+      &--yellow{
+        color: $yellow;
+      }
       span{
+        font-style: italic;
       }
       hr{
         height: 1px;
@@ -124,18 +150,39 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 50%;
+      justify-self: center;
       span{
         text-align: center;
       }
       img{
         max-width: 200px;
       }
+      &--two-center{
+        grid-column: 2 span;
+      }
+      &--two-rigth{
+        grid-column: 2 span;
+        margin-left: 230px;
+      }
+      &--two-lefth{
+        grid-column: 2 span;
+        margin-right: 230px;
+      }
+      &--one-up{
+        margin-bottom: 80px;
+      }
+      &--one-down{
+        margin-top: 80px;
+      }
     }
   }
 }
 .white{
   .header{
-    background-color: white;
+    background: $white;
+    background: -webkit-linear-gradient(to bottom, $white, $light);
+    background: linear-gradient(to bottom, $white, $light);
     &__title{
       color: black;
     }
@@ -149,54 +196,50 @@
     }
   }
   .portfolio{
-    background-color: white;
+    background: $light;
+    background: -webkit-linear-gradient(to bottom, $light, $white);
+    background: linear-gradient(to bottom, $light, $white);
     &__title{
-      color: black;
+      color: $black;
     }
     &__timeline{
       &__year{
-        span{
-          color: black;
-        }
-        hr{
-        }
+        // hr{
+        // }
       }
       &__item{
-        color: black;
+        color: $black;
       }
     }
   }
 }
 .black{
   .header{
-    background-color: black;
+    background-color: $gray;
     &__title{
-      color: white;
+      color: $white;
     }
     &__ca{
       &__text{
-        color: white;
+        color: $white;
       }
       &__icon{
-        color: white;
+        color: $white;
       }
     }
   }
   .portfolio{
     background-color: black;
     &__title{
-      color: white;
+      color: $white;
     }
     &__timeline{
       &__year{
-        span{
-          color: white;
-        }
-        hr{
-        }
+        // hr{
+        // }
       }
       &__item{
-        color: white;
+        color: $white;
       }
     }
   }

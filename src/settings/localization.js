@@ -17,7 +17,11 @@ export default new LocalizedStrings({
     reactNative:"React Native Developer",
     vueJs:"VueJs Developer",
     javascript:"Javascript Developer",
-    worksTitle:"Some of my works"
+    worksTitle:"Some of the projects I work on",
+    worksDescription: "There are from web projects, like mobile and jobs like CM.",
+    socialNetwork: "My social networks:",
+    copyright: "The last update was %d days ago",
+    contactMe: "Contact me"
   },
   ES: {
     works:"Trabajos",

@@ -2,91 +2,84 @@ import React from 'react';
 
 function Portfolio(props) {
   return (
-    <div className='portfolio section'>
-        <span className='portfolio__title'>{props.localization.worksTitle}</span>
+    <section id="works" className='portfolio section'>
+        <span className='portfolio__title'>
+            {props.localization.worksTitle}
+            <span className='portfolio__title--tiny'>
+                {props.localization.worksDescription}
+            </span>
+        </span>
         <div className='portfolio__timeline'>
-            <div className='portfolio__timeline__year'>
+            <div className='portfolio__timeline__year portfolio__timeline__year--orange'>
                 <span>2016</span>
                 <hr />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/atancha.png" />
-                <span>Atancha</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-down'>
+                <img src="/images/atancha.png" alt="Atancha" />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/inti.png" />
-                <span>Agroinfo</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-up'>
+                <img src="/images/inti.png" alt="Agroinfo" />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/inti.png" />
-                <span>Inti API</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--two-rigth'>
+                <img src="/images/inti.png" alt="Inti API" />
             </div>
         </div>
         <div className='portfolio__timeline'>
-            <div className='portfolio__timeline__year'>
+            <div className='portfolio__timeline__year portfolio__timeline__year--aqua'>
                 <hr />
                 <span>2017</span>
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/default.png" />
-                <span>Kromium</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--two-center'>
+                <img src="/images/default.png" alt="Kromium" />
             </div>
         </div>
         <div className='portfolio__timeline'>
-            <div className='portfolio__timeline__year'>
+            <div className='portfolio__timeline__year portfolio__timeline__year--purple'>
                 <span>2018</span>
                 <hr />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/salvador.png" />
-                <span>Xsalvador</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-down'>
+                <img src="/images/salvador.png" alt="XSalvador" />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/panaPanadero.png" />
-                <span>PanaPanadero</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-up'>
+                <img src="/images/panaPanadero.png" alt="PanaPanadero" />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/ilargento.png" />
-                <span>Ilargento</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--two-rigth'>
+                <img src="/images/ilargento.png" alt="Ilargento" />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/default.png" />
-                <span>Mi Portafolio en Vue</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-up'>
+                <img src="/images/default.png" alt="Mi Portafolio en Vue" />
             </div>
         </div>
         <div className='portfolio__timeline'>
-            <div className='portfolio__timeline__year'>
+            <div className='portfolio__timeline__year portfolio__timeline__year--pink'>
                 <hr />
                 <span>2019</span>
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/tuOfertazo.png" />
-                <span>TuOfertazo</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-down'>
+                <img src="/images/tuOfertazo.png" alt="TuOfertazo" />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/aldi.png" />
-                <span>Aldi</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-up'>
+                <img src="/images/aldi.png" alt="Aldi" />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/activeCity.png" />
-                <span>Active City</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-down'>
+                <img src="/images/activeCity.png" alt="Active City" />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/default.png" />
-                <span>Dragoy</span>
+            <div className='portfolio__timeline__item portfolio__timeline__item--one-up'>
+                <img src="/images/default.png" alt="Dragoy" />
             </div>
         </div>
         <div className='portfolio__timeline'>
-            <div className='portfolio__timeline__year'>
+            <div className='portfolio__timeline__year portfolio__timeline__year--yellow'>
                 <span>2020</span>
                 <hr />
             </div>
-            <div className='portfolio__timeline__item'>
-                <img src="/images/default.png" />
+            <div className='portfolio__timeline__item portfolio__timeline__item--two-center'>
+                <img src="/images/default.png" alt="default" />
                 <span>Tu proyecto</span>
             </div>
         </div>
-    </div>
+    </section>
   );
 }
 

@@ -14,15 +14,15 @@ function Menu(props) {
                     <FontAwesomeIcon icon={['far', 'moon']} />
                     {/* <FontAwesomeIcon icon="moon" /> */}
                 </span>
-                <span className="nav__menu__item">
+                <a href="/#works" className="nav__menu__item">
                     {props.state.localization.works}
-                </span>
-                <span className="nav__menu__item">
+                </a>
+                <a href="/#about" className="nav__menu__item">
                     {props.state.localization.about}
-                </span>
-                <span className="nav__menu__item">
+                </a>
+                <a href="/#contact" className="nav__menu__item">
                     {props.state.localization.contact}
-                </span>
+                </a>
             </div>
         </nav>
     );
