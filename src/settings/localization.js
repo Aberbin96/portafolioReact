@@ -9,7 +9,7 @@ export default new LocalizedStrings({
     slideDown:"Slide down",
     backend:"Backend Developer",
     frontend:"Frontend Developer",
-    mobile:"Moblie Developer",
+    mobile:"Mobile Developer",
     reactJs:"ReactJs Developer",
     php:"PHP Developer",
     laravel:"Laravel Developer",
@@ -30,6 +30,23 @@ export default new LocalizedStrings({
     about:"Acerca de mi",
     contact:"Contacto",
     headerTitle:"Hola, me llamo Alejandro Berbin y soy un %i",
-    slideDown:"Desliza hacia abajo"
+    slideDown:"Desliza hacia abajo",
+    backend:"Desarrollador Backend",
+    frontend:"Desarrollador Frontend",
+    mobile:"Desarrollador Mobile",
+    reactJs:"Desarrollador ReactJs",
+    php:"Desarrollador PHP",
+    laravel:"Desarrollador Laravel",
+    wordpress:"Desarrollador Wordpress",
+    reactNative:"Desarrollador React Native",
+    vueJs:"Desarrollador VueJs",
+    javascript:"Desarrollador Javascript",
+    worksTitle:"Some of the projects I work on",
+    worksDescription: "There are from web projects, like mobile and jobs like CM.",
+    socialNetwork: "My social networks:",
+    copyright: "The last update was %d days ago",
+    contactMe: "Contact Me",
+    PortfolioVueJS: "Portfolio VueJS",
+    comingSoon: "Coming Soon"
   }
 });

@@ -23,6 +23,14 @@ export default class CommentList extends React.Component {
   //     };
   //   });
   // }
+  shouldComponentUpdate(nextProps, nextState){
+    return (
+        (this.state.theme !== nextState.theme) || 
+        (this.state.language !== nextState.language) || 
+        (this.state.localization !== nextState.localization)
+    )
+ }
+
   changeTheme = (color) => {
     this.setState((state, props) => {
       return {    

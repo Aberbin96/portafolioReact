@@ -18,6 +18,7 @@
       width: 50%;
       margin: 20px auto;
       cursor: pointer;
+      animation: myfirst 1s infinite alternate;
       &__text{
         display: block;
         font-size: $font-size-xs;
@@ -26,10 +27,18 @@
         display: block;
       }
     }
+    &__header-background{
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+    }
     &__circle{
       position: absolute;
       border-radius: 50%;
       box-shadow: 8px 5px 5px rgba(0,0,0,.4);
+      transition: transform 1s ease;
       &--1{
         bottom: 30%;
         right: 30%;
@@ -318,4 +327,9 @@
       }
     }
   }
+}
+
+@keyframes myfirst {
+  from   {transform: translateY(0px)}
+  to  {transform: translateY(-20px)}
 }
