@@ -4,6 +4,9 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     // font-family: 'Martel', serif;
+    @media only screen and (max-width: 980px) {
+      font-size: 14px;
+    }
 }
 html{
     scroll-behavior: smooth;
@@ -127,4 +130,8 @@ html{
 }
 .d-none{
   display: none;
+}
+.d-block{
+  display: block;
+  font-size: $font-size-m;
 }

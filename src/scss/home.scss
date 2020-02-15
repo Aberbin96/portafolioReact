@@ -4,10 +4,9 @@
     transition: background-color 0.8s ease, color 0.5s linear;
     z-index: 1;
     &__title{
-      z-index: 1;
       text-align: center;
       display: block;
-      width: 50%;
+      width: 80%;
       margin: 20px auto;
       font-size: $font-size-b;
     }
@@ -39,6 +38,7 @@
       border-radius: 50%;
       box-shadow: 8px 5px 5px rgba(0,0,0,.4);
       transition: transform 1s ease;
+      z-index: -1;
       &--1{
         bottom: 30%;
         right: 30%;

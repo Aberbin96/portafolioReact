@@ -4,6 +4,7 @@ import { useDencrypt } from "use-dencrypt-effect";
 
 const Header = (props) => {
   const { result, dencrypt } = useDencrypt();
+  const [ transform, setTransform ] = React.useState({});
   const values = props.values;
   React.useEffect( () => {
     let i = 0;
@@ -11,12 +12,9 @@ const Header = (props) => {
       dencrypt(values[i]);
 
       i = i === values.length - 1 ? 0 : i + 1;
-    }, 2250);
+    }, 5000);
     return () => clearInterval(action);
   }, [values]);
-  const text = (str) => {
-    return str.replace("%i", result)
-  }
   const handleMouseEnter = (e) => {
     updateElementPosition(e.clientX, e.clientY, e.target.offsetWidth, e.target.offsetHeight);
   }
@@ -27,25 +25,37 @@ const Header = (props) => {
     updateElementPosition(0, 0, e.target.offsetWidth, e.target.offsetHeight);
   }
   const updateElementPosition = (x, y, width, height) => {
-    const elementList = document.querySelectorAll('.header__circle');
-    let newX =  ((width/2) >= x)?
-            (x/100):
-            -(x/50);
-    let newY =  ((height/2) >= y)?
-            (y/100):
-            -(y/50);
-    let transform = `translate(${newX}xp,${newY}xp)`;
-    for (var i = 1; i < elementList.length; i++) {
-      elementList[i].style.transform = transform;
-      elementList[i].style.webkitTransform = transform;
-      elementList[i].style.msTransform = transform;
-   }
+    let newX;
+    let newY;
+    if((width * 0.90) <= x){ newX = 21; }
+    if(((width * 0.90) >= x) && ((width * 0.75) <= x)){ newX = 18; }
+    if(((width * 0.75) >= x) && ((width * 0.60) <= x)){ newX = 15; }
+    if(((width * 0.60) >= x) && ((width * 0.45) <= x)){ newX = 12; }
+    if(((width * 0.45) >= x) && ((width * 0.30) <= x)){ newX = 9; }
+    if(((width * 0.30) >= x) && ((width * 0.15) <= x)){ newX = 6; }
+    if((width * 0.15) >= x){ newX = 3; }
+    
+    if((height * 0.9) <= y){ newY = 21; }
+    if(((height * 0.9) >= y) && ((height * 0.75) <= y)){ newY = 18; }
+    if(((height * 0.75) >= y) && ((height * 0.6) <= y)){ newY = 15; }
+    if(((height * 0.6) >= y) && ((height * 0.45) <= y)){ newY = 12; }
+    if(((height * 0.45) >= y) && ((height * 0.3) <= y)){ newY = 9; }
+    if(((height * 0.3) >= y) && ((height * 0.15) <= y)){ newY = 6; }
+    if((height * 0.15) >= y){ newY = 3; }
+
+    setTransform({ 
+      transform: `translate(${newX}px, ${newY}px)`
+    });
   }
   return (
     <header className='header section'>
         { props.children }
         <h1 className="header__title">
-          {text(props.localization.headerTitle)}
+          {props.localization.headerFirstTitle}
+          <span className='d-block'>
+            {(result)? result : props.defaultTitle}
+          </span>
+          {props.localization.headerSecondTitle}
         </h1>
         <a href="#works" id="ca" className="header__ca">
           <span  className="header__ca__text">
@@ -59,13 +69,13 @@ const Header = (props) => {
             onMouseEnter={handleMouseEnter}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}>
-          <figure className="header__circle header__circle--1"></figure>
-          <figure className="header__circle header__circle--2"></figure>
-          <figure className="header__circle header__circle--3"></figure>
-          <figure className="header__circle header__circle--4"></figure>
-          <figure className="header__circle header__circle--5"></figure>
-          <figure className="header__circle header__circle--6"></figure>
-          <figure className="header__circle header__circle--7"></figure>
+          <figure style={transform} className="header__circle header__circle--1"></figure>
+          <figure style={transform} className="header__circle header__circle--2"></figure>
+          <figure style={transform} className="header__circle header__circle--3"></figure>
+          <figure style={transform} className="header__circle header__circle--4"></figure>
+          <figure style={transform} className="header__circle header__circle--5"></figure>
+          <figure style={transform} className="header__circle header__circle--6"></figure>
+          <figure style={transform} className="header__circle header__circle--7"></figure>
         </div>
     </header>
   );

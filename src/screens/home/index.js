@@ -16,11 +16,11 @@ function Home(props) {
     props.state.localization.wordpress,
     props.state.localization.reactNative,
     props.state.localization.vueJs,
-    props.state.localization.javascript,
+    props.state.localization.javascript
   ];
   return (
     <div className={props.state.theme}>
-      <Header localization={props.state.localization} values={values}>
+      <Header localization={props.state.localization} values={values} defaultTitle={props.state.localization.javascript}>
         <Menu state={props.state} />
       </Header>
       <Main>
