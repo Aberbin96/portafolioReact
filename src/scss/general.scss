@@ -4,6 +4,9 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     // font-family: 'Martel', serif;
+    @media only screen and (max-width: 980px) {
+      font-size: 14px;
+    }
 }
 html{
     scroll-behavior: smooth;
@@ -21,6 +24,7 @@ html{
       justify-content: space-between;
       grid-template-columns: repeat(2, 1fr);
         &__ca{
+            border: none;
             width: 200px;
             border-radius: 40px;
             font-size: 1.5em;
@@ -123,4 +127,11 @@ html{
       color: $white;
     }
   }
+}
+.d-none{
+  display: none;
+}
+.d-block{
+  display: block;
+  font-size: $font-size-m;
 }

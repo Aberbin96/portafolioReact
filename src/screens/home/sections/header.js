@@ -1,48 +1,82 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ReactAnime from 'react-animejs'
-const {Anime, stagger} = ReactAnime
+import { useDencrypt } from "use-dencrypt-effect";
 
-function Header(props) {
-  const text = (str) => {
-    let array = [
-      props.localization.backend,
-      props.localization.frontend,
-      props.localization.mobile,
-      props.localization.reactJs,
-      props.localization.php,
-      props.localization.laravel,
-      props.localization.wordpress,
-      props.localization.reactNative,
-      props.localization.vueJs,
-      props.localization.javascript,
-    ]
-    let rValue = parseInt(Math.random() * (array.length - 0) + 0);
-    return str.replace("%i", array[rValue])
+const Header = (props) => {
+  const { result, dencrypt } = useDencrypt();
+  const [ transform, setTransform ] = React.useState({});
+  const values = props.values;
+  React.useEffect( () => {
+    let i = 0;
+    const action = setInterval(() => {
+      dencrypt(values[i]);
+
+      i = i === values.length - 1 ? 0 : i + 1;
+    }, 5000);
+    return () => clearInterval(action);
+  }, [values]);
+  const handleMouseEnter = (e) => {
+    updateElementPosition(e.clientX, e.clientY, e.target.offsetWidth, e.target.offsetHeight);
+  }
+  const handleMouseMove = (e) => {
+    updateElementPosition(e.clientX, e.clientY, e.target.offsetWidth, e.target.offsetHeight);
+  }
+  const handleMouseLeave = (e) => {
+    updateElementPosition(0, 0, e.target.offsetWidth, e.target.offsetHeight);
+  }
+  const updateElementPosition = (x, y, width, height) => {
+    let newX;
+    let newY;
+    if((width * 0.90) <= x){ newX = 21; }
+    if(((width * 0.90) >= x) && ((width * 0.75) <= x)){ newX = 18; }
+    if(((width * 0.75) >= x) && ((width * 0.60) <= x)){ newX = 15; }
+    if(((width * 0.60) >= x) && ((width * 0.45) <= x)){ newX = 12; }
+    if(((width * 0.45) >= x) && ((width * 0.30) <= x)){ newX = 9; }
+    if(((width * 0.30) >= x) && ((width * 0.15) <= x)){ newX = 6; }
+    if((width * 0.15) >= x){ newX = 3; }
+    
+    if((height * 0.9) <= y){ newY = 21; }
+    if(((height * 0.9) >= y) && ((height * 0.75) <= y)){ newY = 18; }
+    if(((height * 0.75) >= y) && ((height * 0.6) <= y)){ newY = 15; }
+    if(((height * 0.6) >= y) && ((height * 0.45) <= y)){ newY = 12; }
+    if(((height * 0.45) >= y) && ((height * 0.3) <= y)){ newY = 9; }
+    if(((height * 0.3) >= y) && ((height * 0.15) <= y)){ newY = 6; }
+    if((height * 0.15) >= y){ newY = 3; }
+
+    setTransform({ 
+      transform: `translate(${newX}px, ${newY}px)`
+    });
   }
   return (
     <header className='header section'>
         { props.children }
         <h1 className="header__title">
-            {text(props.localization.headerTitle)}
+          {props.localization.headerFirstTitle}
+          <span className='d-block'>
+            {(result)? result : props.defaultTitle}
+          </span>
+          {props.localization.headerSecondTitle}
         </h1>
-        <Anime initial={[{targets: "#ca", translateY: -20, easing: "spring", direction: "alternate", loop: true, duration: 1000 }]} >
-          <a href="#works" id="ca" className="header__ca">
-            <span className="header__ca__text">
-                {props.localization.slideDown}
-            </span>
-            <div className="header__ca__icon">
-              <FontAwesomeIcon icon={'chevron-down'} />
-            </div>
-          </a>
-        </Anime>
-        <figure className="header__circle header__circle--1"></figure>
-        <figure className="header__circle header__circle--2"></figure>
-        <figure className="header__circle header__circle--3"></figure>
-        <figure className="header__circle header__circle--4"></figure>
-        <figure className="header__circle header__circle--5"></figure>
-        <figure className="header__circle header__circle--6"></figure>
-        <figure className="header__circle header__circle--7"></figure>
+        <a href="#works" id="ca" className="header__ca">
+          <span  className="header__ca__text">
+            {props.localization.slideDown}
+          </span>
+          <div className="header__ca__icon">
+            <FontAwesomeIcon icon={'chevron-down'} />
+          </div>
+        </a>
+        <div className="header__header-background"
+            onMouseEnter={handleMouseEnter}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}>
+          <figure style={transform} className="header__circle header__circle--1"></figure>
+          <figure style={transform} className="header__circle header__circle--2"></figure>
+          <figure style={transform} className="header__circle header__circle--3"></figure>
+          <figure style={transform} className="header__circle header__circle--4"></figure>
+          <figure style={transform} className="header__circle header__circle--5"></figure>
+          <figure style={transform} className="header__circle header__circle--6"></figure>
+          <figure style={transform} className="header__circle header__circle--7"></figure>
+        </div>
     </header>
   );
 }
