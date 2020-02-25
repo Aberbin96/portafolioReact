@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './sections/header';
 import Portfolio from './sections/portfolio';
+import About from './sections/about';
 import Footer from '../../components/footer';
 import Menu from '../../components/menu';
 import Main from '../../components/main';
@@ -24,6 +25,7 @@ function Home(props) {
         <Menu state={props.state} />
       </Header>
       <Main>
+        <About localization={props.state.localization}/>
         <Portfolio localization={props.state.localization}/>
       </Main>
       <Footer localization={props.state.localization}/>

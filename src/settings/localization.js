@@ -22,9 +22,10 @@ export default new LocalizedStrings({
     worksDescription: "There are from web projects, like mobile and jobs like CM.",
     socialNetwork: "My social networks:",
     copyright: "The last update was %d days ago",
-    contactMe: "Contact Me",
+    contactMe: "Contact Me:",
     PortfolioVueJS: "Portfolio VueJS",
-    comingSoon: "Coming Soon"
+    comingSoon: "Coming Soon",
+    thisIsMeFace: "This is me Face"
   },
   ES: {
     works:"Trabajos",
@@ -49,6 +50,7 @@ export default new LocalizedStrings({
     copyright: "The last update was %d days ago",
     contactMe: "Contact Me",
     PortfolioVueJS: "Portfolio VueJS",
-    comingSoon: "Coming Soon"
+    comingSoon: "Coming Soon",
+    thisIsMeFace: "Esta es mi cara"  
   }
 });

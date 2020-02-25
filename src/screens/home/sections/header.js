@@ -27,21 +27,21 @@ const Header = (props) => {
   const updateElementPosition = (x, y, width, height) => {
     let newX;
     let newY;
-    if((width * 0.90) <= x){ newX = 21; }
-    if(((width * 0.90) >= x) && ((width * 0.75) <= x)){ newX = 18; }
-    if(((width * 0.75) >= x) && ((width * 0.60) <= x)){ newX = 15; }
-    if(((width * 0.60) >= x) && ((width * 0.45) <= x)){ newX = 12; }
-    if(((width * 0.45) >= x) && ((width * 0.30) <= x)){ newX = 9; }
-    if(((width * 0.30) >= x) && ((width * 0.15) <= x)){ newX = 6; }
-    if((width * 0.15) >= x){ newX = 3; }
+    if((width * 0.90) <= x){ newX = -50; } // 21 3
+    if(((width * 0.90) >= x) && ((width * 0.75) <= x)){ newX = -25; } //18 6
+    if(((width * 0.75) >= x) && ((width * 0.60) <= x)){ newX = -15; } //15 9
+    if(((width * 0.60) >= x) && ((width * 0.45) <= x)){ newX = 0; }
+    if(((width * 0.45) >= x) && ((width * 0.30) <= x)){ newX = 15; } //9 15
+    if(((width * 0.30) >= x) && ((width * 0.15) <= x)){ newX = 25; } //6 18
+    if((width * 0.15) >= x){ newX = 50; } //3 21
     
-    if((height * 0.9) <= y){ newY = 21; }
-    if(((height * 0.9) >= y) && ((height * 0.75) <= y)){ newY = 18; }
-    if(((height * 0.75) >= y) && ((height * 0.6) <= y)){ newY = 15; }
-    if(((height * 0.6) >= y) && ((height * 0.45) <= y)){ newY = 12; }
-    if(((height * 0.45) >= y) && ((height * 0.3) <= y)){ newY = 9; }
-    if(((height * 0.3) >= y) && ((height * 0.15) <= y)){ newY = 6; }
-    if((height * 0.15) >= y){ newY = 3; }
+    if((height * 0.9) <= y){ newY = -50; }
+    if(((height * 0.9) >= y) && ((height * 0.75) <= y)){ newY = -25; }
+    if(((height * 0.75) >= y) && ((height * 0.6) <= y)){ newY = -15; }
+    if(((height * 0.6) >= y) && ((height * 0.45) <= y)){ newY = 0; }
+    if(((height * 0.45) >= y) && ((height * 0.3) <= y)){ newY = 15; }
+    if(((height * 0.3) >= y) && ((height * 0.15) <= y)){ newY = 25; }
+    if((height * 0.15) >= y){ newY = 50; }
 
     setTransform({ 
       transform: `translate(${newX}px, ${newY}px)`
