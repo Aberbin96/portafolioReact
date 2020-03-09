@@ -23,9 +23,14 @@ export default new LocalizedStrings({
     socialNetwork: "My social networks:",
     copyright: "The last update was %d days ago",
     contactMe: "Contact Me:",
-    PortfolioVueJS: "Portfolio VueJS",
+    PortfolioVueJS: "8 .Portfolio VueJS",
     comingSoon: "Coming Soon",
-    thisIsMeFace: "This is me Face"
+    thisIsMeFace: "This is me Face",
+    seeMore: "Ver mas",
+    atanchaDesc: "Desarrolle en la aplicacion web de Regularizacion de tierras, usando CakePHP. Ademas que era el encargado del modulo de visualizacion de datos geoespaciales.",
+    agroInfoDesc: "Esta web tenia como objetivo mostrar datos basicos a los bancos de Venezuela, para dar creditos a los campesinos, realice pequenos arreglos en este projecto.",
+    intiApiDesc: "Esta aplicacion era la api encargada de suministrar los datos a la web de AgroInfo.",
+  
   },
   ES: {
     works:"Trabajos",
@@ -51,6 +56,7 @@ export default new LocalizedStrings({
     contactMe: "Contact Me",
     PortfolioVueJS: "Portfolio VueJS",
     comingSoon: "Coming Soon",
-    thisIsMeFace: "Esta es mi cara"  
+    thisIsMeFace: "Esta es mi cara",
+    atanchaDesc: "Desarrolle en la aplicacion web de Regularizacion de tierras, usando CakePHP. Ademas que era el encargado del modulo de visualizacion de datos geoespaciales."
   }
 });

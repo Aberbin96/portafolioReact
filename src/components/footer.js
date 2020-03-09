@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Contact(props) {
   const lastUpdate = (str) => {
     const date1 = new Date();
-    const date2 = new Date('01/04/2020');
+    const date2 = new Date('03/07/2020');
     const diffTime = Math.abs(date2 - date1);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
     return str.replace("%d", diffDays)

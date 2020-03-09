@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './screens/home';
 import string from './settings/localization';
+import isElementInViewport from './settings/elementInViewport';
 import './App.scss';
 import './settings/fontawesome';
 
@@ -15,14 +16,20 @@ export default class CommentList extends React.Component {
       changeLanguage : this.changeLanguage
     };
   }
-  // componentDidMount(){
-  //   this.setState((state, props) => {
-  //     return {    
-  //       localization : string,
-  //       theme : 'white'
-  //     };
-  //   });
-  // }
+  componentDidMount(){
+    const selector = document.querySelector('.header__circle--5');
+    const menu = document.querySelector('.nav');
+    isElementInViewport(
+      selector,
+        function(el, entry) {
+          if (menu.classList.contains('active')) menu.classList.remove("active");
+        },
+        () => {
+            menu.classList.add("active");
+        },
+        '0px'
+    );
+  }
   shouldComponentUpdate(nextProps, nextState){
     return (
         (this.state.theme !== nextState.theme) || 

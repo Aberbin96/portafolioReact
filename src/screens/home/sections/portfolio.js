@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Card from '../../../components/card';
 
 function Portfolio(props) {
   return (
@@ -15,29 +17,49 @@ function Portfolio(props) {
                 <hr />
             </div>
             <div className='portfolio__timeline__content'>
-                <div className='portfolio__timeline__content__item'>
-                    <div className='portfolio__timeline__content__item__inner'>
-                        <div className='portfolio__timeline__content__item__inner__back'>
-                            <span className='portfolio__timeline__item__content__image'></span>
-                            <span className='portfolio__timeline__item__content__title'></span>
-                            <span className='portfolio__timeline__item__content__description'></span>
-                            <span className='portfolio__timeline__item__content__enlace'></span>
-                            <span className='portfolio__timeline__item__content__example'></span>
-                        </div>
-                        <div className='portfolio__timeline__content__item__inner__front'>
-                            <img src="/images/atancha.png" alt="Atancha" />
-                            <span className='portfolio__timeline__content__item__text'>1. Atancha</span>
-                        </div>
-                    </div>
-                </div>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/inti.png" alt="Agroinfo" />
-                    <span className='portfolio__timeline__content__item__text'>2. Agroinfo</span>
-                </div>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/inti.png" alt="Inti API" />
-                    <span className='portfolio__timeline__content__item__text'>3. Inti API</span>
-                </div>
+                <Card 
+                    description={props.localization.atanchaDesc}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fas', 'map-marked-alt']} />
+                    ]}
+                    img="/images/atancha.png"
+                    imgBackground="/images/inti.png"
+                    title="1. Atancha-Omakon"
+                />
+                <Card 
+                    description={props.localization.agroInfoDesc}
+                    link="http://agroinfo.inti.gob.ve/"
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                    ]}
+                    img="/images/inti.png"
+                    imgBackground="/images/inti.png"
+                    title="2. Agroinfo"
+                />
+                <Card 
+                    description={props.localization.intiApiDesc}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                    ]}
+                    img="/images/inti.png"
+                    imgBackground="/images/inti.png"
+                    title="3. Inti API"
+                />
             </div>
         </div>
         <div className='portfolio__timeline portfolio__timeline--rigth'>
@@ -46,10 +68,22 @@ function Portfolio(props) {
                 <hr />
             </div>
             <div className='portfolio__timeline__content'>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/default.png" alt="Kromium" />
-                    <span className='portfolio__timeline__content__item__text'>4. Kromium</span>
-                </div>
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'laravel']} />,
+                        <FontAwesomeIcon icon={['fab', 'vuejs']} />
+                    ]}
+                    img="/images/default.png"
+                    imgBackground="/images/default.png"
+                    title="4. Kromium"
+                />
             </div>
         </div>
         <div className='portfolio__timeline portfolio__timeline--left'>
@@ -58,22 +92,65 @@ function Portfolio(props) {
                 <hr />
             </div>
             <div className='portfolio__timeline__content'>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/salvador.png" alt="XSalvador" />
-                    <span className='portfolio__timeline__content__item__text'>5. XSalvador</span>
-                </div>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/panaPanadero.png" alt="PanaPanadero" />
-                    <span className='portfolio__timeline__content__item__text'>6. PanaPanadero</span>
-                </div>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/ilargento.png" alt="Ilargento" />
-                    <span className='portfolio__timeline__content__item__text'>7. Ilargento</span>
-                </div>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/default.png" alt={props.localization.PortfolioVueJS} />
-                    <span className='portfolio__timeline__content__item__text'>8. {props.localization.PortfolioVueJS}</span>
-                </div>
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'wordpress']} />
+                    ]}
+                    img="/images/salvador.png"
+                    imgBackground="/images/salvador.png"
+                    title="5. XSalvador"
+                />
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'wordpress']} />
+                    ]}
+                    img="/images/panaPanadero.png"
+                    imgBackground="/images/panaPanadero.png"
+                    title="6. PanaPanadero"
+                />
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'wordpress']} />
+                    ]}
+                    img="/images/ilargento.png"
+                    imgBackground="/images/ilargento.png"
+                    title="7. Ilargento"
+                />
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'vuejs']} />
+                    ]}
+                    img="/images/panaPanadero.png"
+                    imgBackground="/images/panaPanadero.png"
+                    title={props.localization.PortfolioVueJS}
+                />
             </div>
         </div>
         <div className='portfolio__timeline portfolio__timeline--rigth'>
@@ -82,23 +159,73 @@ function Portfolio(props) {
                 <hr />
             </div>
             <div className='portfolio__timeline__content'>
-
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/tuOfertazo.png" alt="TuOfertazo" />
-                    <span className='portfolio__timeline__content__item__text'>9. TuOfertazo</span>
-                </div>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/aldi.png" alt="Aldi" />
-                    <span className='portfolio__timeline__content__item__text'>10. Aldi</span>
-                </div>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/activeCity.png" alt="Active City" />
-                    <span className='portfolio__timeline__content__item__text'>11. Active City</span>
-                </div>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/default.png" alt="Dragoy" />
-                    <span className='portfolio__timeline__content__item__text'>12. Dragoy</span>
-                </div>
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'laravel']} />,
+                        <FontAwesomeIcon icon={['fab', 'vuejs']} />,
+                        <FontAwesomeIcon icon={['fab', 'sass']} />
+                    ]}
+                    img="/images/tuOfertazo.png"
+                    imgBackground="/images/tuOfertazo.png"
+                    title='9. TuOfertazo'
+                />
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'wordpress']} />,
+                        <FontAwesomeIcon icon={['fab', 'sass']} />
+                    ]}
+                    img="/images/aldi.png"
+                    imgBackground="/images/aldi.png"
+                    title='10. Aldi'
+                />
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'laravel']} />,
+                        <FontAwesomeIcon icon={['fab', 'vuejs']} />,
+                        <FontAwesomeIcon icon={['fab', 'sass']} />,
+                        <FontAwesomeIcon icon={['fab', 'react']} />
+                    ]}
+                    img="/images/activeCity.png"
+                    imgBackground="/images/activeCity.png"
+                    title='11. Active City'
+                />
+                <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'wordpress']} />,
+                        <FontAwesomeIcon icon={['fab', 'sass']} />
+                    ]}
+                    img="/images/default.png"
+                    imgBackground="/images/default.png"
+                    title='12. Dragoy'
+                />
             </div>
         </div>
         <div className='portfolio__timeline portfolio__timeline--left'>
@@ -107,10 +234,24 @@ function Portfolio(props) {
                 <hr />
             </div>
             <div className='portfolio__timeline__content'>
-                <div className='portfolio__timeline__content__item'>
-                    <img src="/images/comingSoon.png" alt="Dragoy" />
-                    <span className='portfolio__timeline__content__item__text'>{props.localization.comingSoon}</span>
-                </div>
+            <Card 
+                    description={props.localization.seeMore}
+                    link=""
+                    linkName={props.localization.seeMore}
+                    icons={[
+                        <FontAwesomeIcon icon={['fab', 'php']} />,
+                        <FontAwesomeIcon icon={['fab', 'js']} />,
+                        <FontAwesomeIcon icon={['fab', 'html5']} />,
+                        <FontAwesomeIcon icon={['fab', 'css3']} />,
+                        <FontAwesomeIcon icon={['fab', 'laravel']} />,
+                        <FontAwesomeIcon icon={['fab', 'vuejs']} />,
+                        <FontAwesomeIcon icon={['fab', 'sass']} />,
+                        <FontAwesomeIcon icon={['fab', 'react']} />
+                    ]}
+                    img="/images/comingSoon.png"
+                    imgBackground="/images/comingSoon.png"
+                    title={props.localization.comingSoon}
+                />
             </div>
         </div>
     </section>
