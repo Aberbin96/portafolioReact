@@ -1,4 +1,4 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,75 +9,94 @@
     top: 0;
     left: 0;
     right: 0;
+
     @media (max-width: $breakpoint-tablet) {
         padding: 10px 0;
         position: absolute;
     }
+
     &.active {
         position: fixed;
         background-color: rgba(0, 0, 0, 0.1);
     }
-    &__logo{
+
+    &__logo {
         width: 80px;
         margin: auto 20px;
         font-size: 50px; //borrar
     }
-    &__mobile-menu{
+
+    &__mobile-menu {
         display: none;
         width: 80px;
         margin: auto 20px;
         font-size: 50px;
+
         @media (max-width: $breakpoint-tablet) {
             display: block;
         }
     }
-    &__menu{
+
+    &__menu {
         display: flex;
-        @media (max-width: $breakpoint-tablet) {
-            display: none;
+
+        a {
+            @media (max-width: $breakpoint-tablet) {
+                display: none;
+            }
         }
-        &__item{
+
+        &__item {
             margin: 0 15px;
             text-decoration: none;
             color: $black;
             cursor: pointer;
-            &__languages{
+
+            &__languages {
                 margin-left: 5px;
             }
-            &:hover{
+
+            &:hover {
                 transform: scale(1.1);
                 transition-duration: .2s;
             }
-            &.active{
+
+            &.active {
                 font-weight: $font-weight-b;
             }
         }
     }
 }
-.white{
-    .nav{
-        &__logo{
+
+.white {
+    .nav {
+        &__logo {
             color: black;
         }
-        &__menu{
-            &__item{
+
+        &__menu {
+            &__item {
                 color: black;
-                &__languages{
+
+                &__languages {
                     color: black;
                 }
             }
         }
     }
 }
-.black{
-    .nav{
-        &__logo{
+
+.black {
+    .nav {
+        &__logo {
             color: white;
         }
-        &__menu{
-            &__item{
+
+        &__menu {
+            &__item {
                 color: white;
-                &__languages{
+
+                &__languages {
                     color: white;
                 }
             }

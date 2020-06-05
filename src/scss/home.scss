@@ -1,229 +1,344 @@
-.header{
-    min-height: 100vh;
-    position: relative;
-    transition: background-color 0.8s ease, color 0.5s linear;
+.header {
+  min-height: 100vh;
+  position: relative;
+  transition: background-color 0.8s ease, color 0.5s linear;
+  z-index: 1;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    font-size: $font-size-b;
+    margin-top: auto;
+  }
+
+  &__ca {
+    text-decoration: none;
     z-index: 1;
-    @media (max-width: $breakpoint-tablet) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    &__title{
-      text-align: center;
+    text-align: center;
+    width: 50%;
+    margin: 20px auto;
+    cursor: pointer;
+    animation: bounce 1s infinite alternate;
+    margin-top: auto;
+
+    &__text {
       display: block;
-      width: 80%;
-      margin: 20px auto;
-      font-size: $font-size-b;
+      font-size: $font-size-xs;
     }
-    &__ca{
-      text-decoration: none;
-      z-index: 1;
-      text-align: center;
-      width: 50%;
-      margin: 20px auto;
-      cursor: pointer;
-      animation: myfirst 1s infinite alternate;
-      &__text{
-        display: block;
-        font-size: $font-size-xs;
-      }
-      &__icon{
-        display: block;
-      }
+
+    &__icon {
+      display: block;
     }
-    &__header-background{
-      position: absolute;
-      top:0;
-      bottom:0;
-      left:0;
-      right:0;
+  }
+
+  &__header-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__circle {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 8px 5px 5px rgba(0, 0, 0, .4);
+    transition: transform 1s ease;
+    z-index: -1;
+    margin: 0;
+
+    @media only screen and (max-width: 480px) {
+      animation: equalize 1.25s 0s infinite;
     }
-    &__circle{
-      position: absolute;
-      border-radius: 50%;
-      box-shadow: 8px 5px 5px rgba(0,0,0,.4);
-      transition: transform 1s ease;
-      z-index: -1;
-      &--1{
-        bottom: 30%;
-        right: 30%;
-        width: 40px;
-        height: 40px;
-        background: $orange;
-        background: -webkit-linear-gradient(to bottom right, $orange, $yellow);
-        background: linear-gradient(to bottom right, $orange, $yellow);
-      }
-      &--2{
-        bottom: 20%;
-        right: 40%;
-        width: 100px;
-        height: 100px;
-        background: $aqua;
-        background: -webkit-linear-gradient(to bottom right, $aqua, $purple);
-        background: linear-gradient(to bottom right, $aqua, $purple);
-      }
-      &--3{
-        bottom: 0px;
+
+    &--1 {
+      bottom: 0;
+      right: 2%;
+      width: 250px;
+      height: 250px;
+
+      @media only screen and (max-width: 480px) {
+        bottom: 0;
         right: 2%;
-        width: 250px;
-        height: 250px;
-        background: $purple;
-        background: -webkit-linear-gradient(to bottom right, $purple, $pink);
-        background: linear-gradient(to bottom right, $purple, $pink);
+        width: 200px;
+        height: 200px;
       }
-      &--4{
-        top: 10%;
+
+      background: $purple;
+      background: -webkit-linear-gradient(to bottom right, $purple, $pink);
+      background: linear-gradient(to bottom right, $purple, $pink);
+      animation-duration: 8s;
+    }
+
+
+    &--2 {
+      bottom: 10%;
+      left: 0%;
+      width: 200px;
+      height: 200px;
+
+      @media only screen and (max-width: 480px) {
+        bottom: 0%;
+        left: 5%;
+        width: 150px;
+        height: 150px;
+      }
+
+      background: $purple;
+      background: -webkit-linear-gradient(to bottom right, $purple, $yellow);
+      background: linear-gradient(to bottom right, $purple, $yellow);
+      animation-duration: 3s;
+    }
+
+    &--3 {
+      bottom: 30%;
+      right: 40%;
+      width: 100px;
+      height: 100px;
+
+      @media only screen and (max-width: 480px) {
+        bottom: 20%;
+        left: 0%;
+        width: 80px;
+        height: 80px;
+      }
+
+      background: $aqua;
+      background: -webkit-linear-gradient(to bottom right, $aqua, $purple);
+      background: linear-gradient(to bottom right, $aqua, $purple);
+      animation-duration: 4s;
+    }
+
+    &--4 {
+      bottom: 30%;
+      right: 40%;
+      width: 40px;
+      height: 40px;
+
+      @media only screen and (max-width: 480px) {
+        bottom: 30%;
+        left: 10%;
+        width: 45px;
+        height: 45px;
+      }
+
+      background: $orange;
+      background: -webkit-linear-gradient(to bottom right, $orange, $yellow);
+      background: linear-gradient(to bottom right, $orange, $yellow);
+      animation-duration: 2s;
+    }
+
+    &--5 {
+      top: 10%;
+      right: 0%;
+      width: 150px;
+      height: 150px;
+
+      @media only screen and (max-width: 480px) {
+        top: 7%;
         right: 0%;
         width: 150px;
         height: 150px;
-        background: $pink;
-        background: -webkit-linear-gradient(to bottom right, $pink, $purple);
-        background: linear-gradient(to bottom right, $pink, $purple);
       }
-      &--5{
-        top: -50px;
-        left: 30%;
-        width: 170px;
-        height: 170px;
-        background: $yellow;
-        background: -webkit-linear-gradient(to bottom right, $yellow, $orange);
-        background: linear-gradient(to bottom right, $yellow, $orange);
+
+      background: $pink;
+      background: -webkit-linear-gradient(to bottom right, $pink, $purple);
+      background: linear-gradient(to bottom right, $pink, $purple);
+      animation-duration: 6s;
+    }
+
+    &--6 {
+      top: -50px;
+      left: 30%;
+      width: 170px;
+      height: 170px;
+
+      @media only screen and (max-width: 480px) {
+        top: 2%;
+        right: 30%;
+        left: auto;
+        width: 100px;
+        height: 100px;
       }
-      &--6{
-        top: 25%;
-        left: 13%;
+
+      background: $yellow;
+      background: -webkit-linear-gradient(to bottom right, $yellow, $orange);
+      background: linear-gradient(to bottom right, $yellow, $orange);
+      animation-duration: 2.4s;
+    }
+
+    &--7 {
+      top: 25%;
+      left: 13%;
+      width: 60px;
+      height: 60px;
+
+      @media only screen and (max-width: 480px) {
+        top: 10%;
+        left: 35%;
         width: 60px;
         height: 60px;
-        background: $orange;
-        background: -webkit-linear-gradient(to bottom right, $orange, $pink);
-        background: linear-gradient(to bottom right, $orange, $pink);
       }
-      &--7{
-        bottom: 12%;
-        left: -5%;
-        width: 200px;
-        height: 200px;
-        background: $purple;
-        background: -webkit-linear-gradient(to bottom right, $purple, $yellow);
-        background: linear-gradient(to bottom right, $purple, $yellow);
-      }
+
+      background: $orange;
+      background: -webkit-linear-gradient(to bottom right, $orange, $pink);
+      background: linear-gradient(to bottom right, $orange, $pink);
+      animation-duration: 3.3s;
     }
+  }
 }
+
 .about {
   margin: 30px 5%;
+
   img {
     margin: auto;
     border-radius: 50%;
     width: 50%;
   }
+
   &__name {
     text-align: center;
   }
 }
-.portfolio{
+
+.portfolio {
   padding: 50px 0;
   position: relative;
-  &__title{
+
+  &__title {
     font-size: $font-size-l;
     font-weight: $font-weight-b;
     text-align: right;
     margin: 20px 10px 20px auto;
     line-height: 1.3;
     width: 90%;
-    &--tiny{
+    overflow: hidden;
+    transition: transform 1s;
+
+    &--tiny {
+      transition: transform 1s;
       font-size: $font-size-x;
       font-weight: $font-weight-n;
       display: block;
     }
   }
-  &__timeline{
+
+  &__timeline {
     display: grid;
     padding-top: 50px;
-    &--left{
+
+    &--left {
       grid-template-columns: 30px 1fr;
       grid-template-areas: "line item";
-      .text{
+
+      .text {
         position: absolute;
         left: 100%;
       }
     }
-    &--rigth{
+
+    &--rigth {
       grid-template-columns: 1fr 30px;
       grid-template-areas: "item line";
-      .text{
+      margin-left: 10px;
+
+      .text {
         position: absolute;
         right: 100%;
       }
     }
-    &__year{
+
+    &__year {
       display: flex;
       flex-direction: column;
       align-items: center;
       grid-area: line;
       grid-row: 4 span;
       position: relative;
-      &--orange{
-        span{
+
+      &--orange {
+        span {
           color: $orange;
         }
-        hr{
+
+        hr {
           background: $orange;
           background: -webkit-linear-gradient(to bottom, $orange, $white);
           background: linear-gradient(to bottom, $orange, $white);
         }
       }
-      &--aqua{
-        span{
+
+      &--aqua {
+        span {
           color: $aqua;
         }
-        hr{
+
+        hr {
           background: $aqua;
           background: -webkit-linear-gradient(to bottom, $aqua, $white);
           background: linear-gradient(to bottom, $aqua, $white);
         }
       }
-      &--purple{
-        span{
+
+      &--purple {
+        span {
           color: $purple;
         }
-        hr{
+
+        hr {
           background: $purple;
           background: -webkit-linear-gradient(to bottom, $purple, $white);
           background: linear-gradient(to bottom, $purple, $white);
         }
       }
-      &--pink{
-        span{
+
+      &--pink {
+        span {
           color: $pink;
         }
-        hr{
+
+        hr {
           background: $pink;
           background: -webkit-linear-gradient(to bottom, $pink, $white);
           background: linear-gradient(to bottom, $pink, $white);
         }
       }
-      &--yellow{
-        span{
+
+      &--yellow {
+        span {
           color: $yellow;
         }
-        hr{
+
+        hr {
           background: $yellow;
           background: -webkit-linear-gradient(to bottom, $yellow, $white);
           background: linear-gradient(to bottom, $yellow, $white);
         }
       }
-      span{
+
+      span {
         font-style: italic;
         font-size: $font-size-b;
         margin-bottom: 10px;
       }
-      hr{
+
+      hr {
         height: 100%;
-        border:none;
+        border: none;
         margin: 0;
         width: 1px;
       }
     }
+
     &__content {
       display: grid;
       grid-auto-flow: column;
@@ -233,68 +348,77 @@
     }
   }
 }
-.white{
-  .header{
+
+.white {
+  .header {
     background: $white;
-    &__title{
+
+    &__title {
       color: black;
     }
-    &__ca{
-      &__text{
+
+    &__ca {
+      &__text {
         color: black;
       }
-      &__icon{
+
+      &__icon {
         color: black;
       }
     }
   }
-  .portfolio{
+
+  .portfolio {
     background: $white;
-    &__title{
+
+    &__title {
       color: $black;
     }
-    &__timeline{
-      &__year{
+
+    &__timeline {
+      &__year {
         // hr{
         // }
       }
-      &__content {
-      }
-    }
-  }
-}
-.black{
-  .header{
-    background-color: $gray;
-    &__title{
-      color: $white;
-    }
-    &__ca{
-      &__text{
-        color: $white;
-      }
-      &__icon{
-        color: $white;
-      }
-    }
-  }
-  .portfolio{
-    background-color: $black;
-    &__title{
-      color: $white;
-    }
-    &__timeline{
-      &__year{
-        // hr{
-        // }
-      }
-      &__content {
-      }
+
+      &__content {}
     }
   }
 }
 
-@keyframes myfirst {
-  from   {transform: translateY(0px)}
-  to  {transform: translateY(-20px)}
+.black {
+  .header {
+    background-color: $black;
+
+    &__title {
+      color: $white;
+    }
+
+    &__ca {
+      &__text {
+        color: $white;
+      }
+
+      &__icon {
+        color: $white;
+      }
+    }
+  }
+
+  .portfolio {
+    background-color: $black;
+
+    &__title {
+      color: $white;
+    }
+
+    &__timeline {
+      &__year {
+        // hr{
+        // }
+      }
+
+      &__content {}
+    }
+  }
 }
