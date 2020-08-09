@@ -29,7 +29,7 @@ function Home({ state }) {
         <Menu state={state} />
       </Header>
       <Main>
-        <About localization={state.localization} />
+        {/* <About localization={state.localization} /> */}
         <Portfolio localization={state.localization} />
       </Main>
       <Footer localization={state.localization} />

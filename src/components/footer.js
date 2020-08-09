@@ -54,12 +54,12 @@ function Contact(props) {
           >
             <img className="platzi" src="/images/Platzi.png" alt="Platzi" />
           </a>
-          <a
+          {/* <a
             href="https://www.reddit.com/user/aberbin"
             className="contact__social__item reddit"
           >
             <FontAwesomeIcon icon={["fab", "reddit"]} />
-          </a>
+          </a> */}
         </div>
       </section>
       <span className="copyrigth">

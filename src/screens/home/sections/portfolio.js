@@ -69,7 +69,7 @@ function Portfolio({ localization }) {
         </div>
         <div className="portfolio__timeline__content">
           <Card
-            description={localization.seeMore}
+            description={localization.kromiumDesc}
             link=""
             linkName={localization.seeMore}
             icons={[
@@ -80,8 +80,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "laravel"]} />,
               <FontAwesomeIcon icon={["fab", "vuejs"]} />,
             ]}
-            img="/images/default.png"
-            imgBackground="/images/default.png"
+            img="/images/297254.svg"
+            imgBackground="/images/297254.svg"
             title="4. Kromium"
           />
         </div>
@@ -93,7 +93,7 @@ function Portfolio({ localization }) {
         </div>
         <div className="portfolio__timeline__content">
           <Card
-            description={localization.seeMore}
+            description={localization.xSalvadorDesc}
             link=""
             linkName={localization.seeMore}
             icons={[
@@ -108,8 +108,8 @@ function Portfolio({ localization }) {
             title="5. XSalvador"
           />
           <Card
-            description={localization.seeMore}
-            link=""
+            description={localization.tuPanaPanaderoDesc}
+            link="https://tupanapanadero.com/"
             linkName={localization.seeMore}
             icons={[
               <FontAwesomeIcon icon={["fab", "php"]} />,
@@ -123,7 +123,7 @@ function Portfolio({ localization }) {
             title="6. PanaPanadero"
           />
           <Card
-            description={localization.seeMore}
+            description={localization.ilargentoDesc}
             link=""
             linkName={localization.seeMore}
             icons={[
@@ -138,7 +138,7 @@ function Portfolio({ localization }) {
             title="7. Ilargento"
           />
           <Card
-            description={localization.seeMore}
+            description={localization.portafolioVueDesc}
             link=""
             linkName={localization.seeMore}
             icons={[
@@ -160,7 +160,7 @@ function Portfolio({ localization }) {
         </div>
         <div className="portfolio__timeline__content">
           <Card
-            description={localization.seeMore}
+            description={localization.tuOfertazoDesc}
             link=""
             linkName={localization.seeMore}
             icons={[
@@ -177,7 +177,7 @@ function Portfolio({ localization }) {
             title="9. TuOfertazo"
           />
           <Card
-            description={localization.seeMore}
+            description={localization.aldiDesc}
             link=""
             linkName={localization.seeMore}
             icons={[
@@ -193,7 +193,7 @@ function Portfolio({ localization }) {
             title="10. Aldi"
           />
           <Card
-            description={localization.seeMore}
+            description={localization.activeCityDesc}
             link=""
             linkName={localization.seeMore}
             icons={[
@@ -211,7 +211,7 @@ function Portfolio({ localization }) {
             title="11. Active City"
           />
           <Card
-            description={localization.seeMore}
+            description={localization.dragoyDesc}
             link=""
             linkName={localization.seeMore}
             icons={[
@@ -222,8 +222,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "wordpress"]} />,
               <FontAwesomeIcon icon={["fab", "sass"]} />,
             ]}
-            img="/images/default.png"
-            imgBackground="/images/default.png"
+            img="/images/297254.svg"
+            imgBackground="/images/297254.svg"
             title="12. Dragoy"
           />
         </div>
@@ -235,7 +235,7 @@ function Portfolio({ localization }) {
         </div>
         <div className="portfolio__timeline__content">
           <Card
-            description={localization.seeMore}
+            description={localization.comingSoonDesc}
             link=""
             linkName={localization.seeMore}
             icons={[

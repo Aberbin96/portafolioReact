@@ -7,7 +7,7 @@ function Menu(props) {
       <FontAwesomeIcon className="nav__logo" icon={["fab", "adn"]} />
       {/* <FontAwesomeIcon className="nav__mobile-menu" icon={["fas", "bars"]} /> */}
       <div className="nav__menu">
-        <span
+        {/* <span
           onClick={() =>
             props.state.changeLanguage(
               props.state.language !== "EN" ? "EN" : "ES"
@@ -19,7 +19,7 @@ function Menu(props) {
           <span className="nav__menu__item__languages">
             {props.state.localization.getLanguage()}
           </span>
-        </span>
+        </span> */}
         <span
           onClick={() =>
             props.state.changeTheme(
@@ -34,9 +34,9 @@ function Menu(props) {
         <a href="/#works" className="nav__menu__item">
           {props.state.localization.works}
         </a>
-        <a href="/#about" className="nav__menu__item">
+        {/* <a href="/#about" className="nav__menu__item">
           {props.state.localization.about}
-        </a>
+        </a> */}
         <a href="/#contact" className="nav__menu__item">
           {props.state.localization.contact}
         </a>
