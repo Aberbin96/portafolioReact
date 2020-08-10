@@ -28,8 +28,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "css3"]} />,
               <FontAwesomeIcon icon={["fas", "map-marked-alt"]} />,
             ]}
-            img="/images/atancha.png"
-            imgBackground="/images/inti.png"
+            img="images/atancha.png"
+            imgBackground="images/inti.png"
             title="1. Atancha-Omakon"
           />
           <Card
@@ -42,8 +42,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "html5"]} />,
               <FontAwesomeIcon icon={["fab", "css3"]} />,
             ]}
-            img="/images/inti.png"
-            imgBackground="/images/inti.png"
+            img="images/inti.png"
+            imgBackground="images/inti.png"
             title="2. Agroinfo"
           />
           <Card
@@ -56,8 +56,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "html5"]} />,
               <FontAwesomeIcon icon={["fab", "css3"]} />,
             ]}
-            img="/images/inti.png"
-            imgBackground="/images/inti.png"
+            img="images/inti.png"
+            imgBackground="images/inti.png"
             title="3. Inti API"
           />
         </div>
@@ -80,8 +80,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "laravel"]} />,
               <FontAwesomeIcon icon={["fab", "vuejs"]} />,
             ]}
-            img="/images/297254.svg"
-            imgBackground="/images/297254.svg"
+            img="images/297254.svg"
+            imgBackground="images/297254.svg"
             title="4. Kromium"
           />
         </div>
@@ -103,8 +103,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "css3"]} />,
               <FontAwesomeIcon icon={["fab", "wordpress"]} />,
             ]}
-            img="/images/salvador.png"
-            imgBackground="/images/salvador.png"
+            img="images/salvador.png"
+            imgBackground="images/salvador.png"
             title="5. XSalvador"
           />
           <Card
@@ -118,8 +118,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "css3"]} />,
               <FontAwesomeIcon icon={["fab", "wordpress"]} />,
             ]}
-            img="/images/panaPanadero.png"
-            imgBackground="/images/panaPanadero.png"
+            img="images/panaPanadero.png"
+            imgBackground="images/panaPanadero.png"
             title="6. PanaPanadero"
           />
           <Card
@@ -133,8 +133,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "css3"]} />,
               <FontAwesomeIcon icon={["fab", "wordpress"]} />,
             ]}
-            img="/images/ilargento.png"
-            imgBackground="/images/ilargento.png"
+            img="images/ilargento.png"
+            imgBackground="images/ilargento.png"
             title="7. Ilargento"
           />
           <Card
@@ -147,8 +147,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "css3"]} />,
               <FontAwesomeIcon icon={["fab", "vuejs"]} />,
             ]}
-            img="/images/panaPanadero.png"
-            imgBackground="/images/panaPanadero.png"
+            img="images/panaPanadero.png"
+            imgBackground="images/panaPanadero.png"
             title={localization.PortfolioVueJS}
           />
         </div>
@@ -172,8 +172,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "vuejs"]} />,
               <FontAwesomeIcon icon={["fab", "sass"]} />,
             ]}
-            img="/images/tuOfertazo.png"
-            imgBackground="/images/tuOfertazo.png"
+            img="images/tuOfertazo.png"
+            imgBackground="images/tuOfertazo.png"
             title="9. TuOfertazo"
           />
           <Card
@@ -188,8 +188,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "wordpress"]} />,
               <FontAwesomeIcon icon={["fab", "sass"]} />,
             ]}
-            img="/images/aldi.png"
-            imgBackground="/images/aldi.png"
+            img="images/aldi.png"
+            imgBackground="images/aldi.png"
             title="10. Aldi"
           />
           <Card
@@ -206,8 +206,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "sass"]} />,
               <FontAwesomeIcon icon={["fab", "react"]} />,
             ]}
-            img="/images/activeCity.png"
-            imgBackground="/images/activeCity.png"
+            img="images/activeCity.png"
+            imgBackground="images/activeCity.png"
             title="11. Active City"
           />
           <Card
@@ -222,8 +222,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "wordpress"]} />,
               <FontAwesomeIcon icon={["fab", "sass"]} />,
             ]}
-            img="/images/297254.svg"
-            imgBackground="/images/297254.svg"
+            img="images/297254.svg"
+            imgBackground="images/297254.svg"
             title="12. Dragoy"
           />
         </div>
@@ -248,8 +248,8 @@ function Portfolio({ localization }) {
               <FontAwesomeIcon icon={["fab", "sass"]} />,
               <FontAwesomeIcon icon={["fab", "react"]} />,
             ]}
-            img="/images/comingSoon.png"
-            imgBackground="/images/comingSoon.png"
+            img="images/comingSoon.png"
+            imgBackground="images/comingSoon.png"
             title={localization.comingSoon}
           />
         </div>

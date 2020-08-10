@@ -52,7 +52,7 @@ function Contact(props) {
             href="https://platzi.com/@alejandrob_96/"
             className="contact__social__item platzi"
           >
-            <img className="platzi" src="/images/Platzi.png" alt="Platzi" />
+            <img className="platzi" src="images/Platzi.png" alt="Platzi" />
           </a>
           {/* <a
             href="https://www.reddit.com/user/aberbin"

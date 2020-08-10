@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./sections/header";
 import Portfolio from "./sections/portfolio";
-import About from "./sections/about";
+// import About from "./sections/about";
 import Footer from "../../components/footer";
 import Menu from "../../components/menu";
 import Main from "../../components/main";
