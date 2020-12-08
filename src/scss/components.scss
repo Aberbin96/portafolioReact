@@ -8,7 +8,6 @@
     transform: rotateY(180deg);
   }
   &__text {
-    background: $black;
     color: $white;
     padding: 0.3em;
     position: absolute;
@@ -88,4 +87,15 @@
       }
     }
   }
+}
+.button {
+  background-color: $yellow;
+  padding: 5px 0;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  min-width: 200px;
+  font-size: $font-size-s;
+  font-weight: $font-weight-b;
+  color: $white;
 }

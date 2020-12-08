@@ -1,141 +1,172 @@
-@import url('https://fonts.googleapis.com/css?family=Martel|Montserrat&display=swap');
-body{
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    overflow-x: hidden;
-    overflow-y: visible;
-    // font-family: 'Martel', serif;
-    @media only screen and (max-width: 980px) {
-      font-size: 14px;
-    }
+@import url("https://fonts.googleapis.com/css?family=Martel|Montserrat&display=swap");
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  // font-family: 'Martel', serif;
+  @media only screen and (max-width: 980px) {
+    font-size: 14px;
+  }
 }
-html{
-    scroll-behavior: smooth;
+.body {
+  transition: background-color 0.8s ease, color 0.5s linear;
 }
-.section{
+html {
+  scroll-behavior: smooth;
+}
+main {
+  &.home {
+    padding-top: 40px;
+  }
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer {
+  padding: 20px 5%;
+  .contact {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-.footer{
-    padding: 50px 5% 20px 5%;
-    .contact{
+    justify-content: center;
+    &__data {
+      text-align: center;
+      margin-bottom: 50px;
+      &__title {
+        font-size: $font-size-s;
+        font-weight: $font-weight-b;
+        display: block;
+      }
+      &__email {
+        padding-top: 15px;
+        font-size: $font-size-s;
+        display: block;
+      }
+    }
+    &__social {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-        &__data{
-          text-align: center;
-          &__title{
-            font-size: $font-size-s;
-            font-weight: $font-weight-b;
-            display: block;
-          }
-          &__email{
-            padding-top: 15px;
-            font-size: $font-size-s;
-            display: block;
-          }
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      &__title {
+        display: block;
+        width: 100%;
+        font-size: $font-size-s;
+        font-weight: $font-weight-b;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      &__item {
+        margin: 10px 15px;
+        font-size: 50px;
+        text-decoration: none;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 0;
+        &:hover {
+          transform: scale(1.1);
+          transition-duration: 0.2s;
         }
-        &__social{
+        &.linkedin {
+          color: #0e76a8;
+        }
+        &.instagram {
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-wrap: wrap;
-          margin-top: 30px;
-          margin-bottom: 50px;
-          &__title{
-            display: block;
-            width: 100%;
-            font-size: $font-size-s;
-            font-weight: $font-weight-b;
-            margin-bottom: 10px;
-            text-align: center;
-          }
-          &__item{
-            margin: 10px 15px;
-            font-size: 50px;
-            text-decoration: none;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            line-height: 0;
-            &.linkedin{
-              color: #0E76A8;
-            }
-            &.instagram{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 45px;
-              border-radius: 8px;
-              color: #fff;
-              vertical-align: middle;
-              background: #d6249f;
-              background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-            }
-            &.goodreads{
-              color: #75420e;
-            }
-            .platzi{
-              max-width: 50px;
-            }
-            &.reddit{
-              color: #FF4301;
-            }
-          }
+          font-size: 45px;
+          border-radius: 8px;
+          color: #fff;
+          vertical-align: middle;
+          background: #d6249f;
+          background: radial-gradient(
+            circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%
+          );
         }
+        &.goodreads {
+          color: #75420e;
+        }
+        .platzi {
+          max-width: 50px;
+          font-size: 15px;
+        }
+        &.mail {
+          font-size: 35px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $white;
+          background-color: $orange;
+        }
+      }
     }
-    .copyrigth{
-        text-align: center;
-        display: block;
-        font-size: $font-size-xs;
-    }
+  }
+  .copyrigth {
+    text-align: center;
+    display: block;
+    font-size: $font-size-xs;
+  }
 }
-.white{
-  .footer{
-    background: $white;
-    .contact{
-      &__social{
-        &__title{
+.white {
+  background: $white;
+  .footer {
+    .contact {
+      &__social {
+        &__title {
           color: $black;
         }
-        &__item{
-          &.github{
+        &__item {
+          &.github {
             color: $black;
           }
         }
       }
     }
-    .copyrigth{
+    .copyrigth {
       color: $black;
     }
   }
 }
-.black{
-  .footer{
-    background: $black;
-    .contact{
-      &__social{
-        &__title{
+.black {
+  background: $dark;
+  .footer {
+    .contact {
+      &__data {
+        &__email {
           color: $white;
         }
-        &__item{
-          &.github{
+      }
+      &__social {
+        &__title {
+          color: $white;
+        }
+        &__item {
+          &.github {
             color: $white;
           }
         }
       }
     }
-    .copyrigth{
+    .copyrigth {
       color: $white;
     }
   }
 }
-.d-none{
+.d-none {
   display: none;
 }
-.d-block{
+.d-block {
   display: block;
   font-size: $font-size-m;
 }
