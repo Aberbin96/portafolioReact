@@ -5,7 +5,7 @@ const About = ({ children, localization, values, defaultTitle }) => {
     <div id="about" className="about section">
       <div className="about__bio">
         <div className="about__bio__image">
-          <img src="portafolioReact/images/6a6f4ea.jpg" alt="myFace" />
+          <img src="images/6a6f4ea.jpg" alt="myFace" />
         </div>
         <span className="about__bio__description">
           <span className="about__bio__description__title">
@@ -30,7 +30,7 @@ const About = ({ children, localization, values, defaultTitle }) => {
           </span>
           <img
             className="about__best-projects__item__background"
-            src="portafolioReact/images/Screenshot_1.png"
+            src="images/Screenshot_1.png"
             alt="active city"
           />
         </div>
@@ -40,7 +40,7 @@ const About = ({ children, localization, values, defaultTitle }) => {
           </span>
           <img
             className="about__best-projects__item__background"
-            src="portafolioReact/images/Screenshot_3.png"
+            src="images/Screenshot_3.png"
             alt="festyz"
           />
         </div>
@@ -50,7 +50,7 @@ const About = ({ children, localization, values, defaultTitle }) => {
           </span>
           <img
             className="about__best-projects__item__background"
-            src="portafolioReact/images/Screenshot_2.png"
+            src="images/Screenshot_2.png"
             alt="digoPago"
           />
         </div>
